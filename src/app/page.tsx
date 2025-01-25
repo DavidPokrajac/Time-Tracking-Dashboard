@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { promises as fs } from "fs";
-import Image from "next/image";
-import Card from "./components/Card";
+/* import Image from "next/image";
+import Card from "./components/Card"; */
+import CardContainer from "./components/CardContainer";
 
 export default async function Home() {
     const file = await fs.readFile(process.cwd() + "/data.json", "utf8");
@@ -11,22 +12,7 @@ export default async function Home() {
     return (
         <main>
             <section>
-                <div>
-                    <Image
-                        src="/images/image-jeremy.png"
-                        width={234}
-                        height={234}
-                        alt=""
-                    />
-                    <p>Report for</p>
-                    <h2>Jeremy Robson</h2>
-                    <div>
-                        <button>Daily</button>
-                        <button>Weekly</button>
-                        <button>Monthly</button>
-                    </div>
-                </div>
-                <Card data={data} />
+                <CardContainer data={data} />
             </section>
         </main>
     );
