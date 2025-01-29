@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { promises as fs } from "fs";
-/* import Image from "next/image";
-import Card from "./components/Card"; */
 import CardContainer from "./components/CardContainer";
 
 export default async function Home() {

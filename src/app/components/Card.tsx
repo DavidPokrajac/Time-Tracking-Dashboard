@@ -1,23 +1,24 @@
-import { Fragment } from "react";
+// import { Fragment } from "react";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-interface CardProps {
-    data: any;
+export interface CardProps {
+    data: {
+        title: string;
+        timeframes: {
+            [key: string]: {
+                current: number;
+                previous: number;
+            };
+        };
+    };
     timeframe: string;
 }
 
 export default function Card({ data, timeframe }: CardProps) {
     return (
         <div>
-            {data.map((d: any, idx: any) => {
-                return (
-                    <Fragment key={idx}>
-                        <h3>{d.title}</h3>
-                        <p>{d.timeframes[timeframe].current}hrs</p>
-                        <p>Yesterday - {d.timeframes[timeframe].previous}hrs</p>
-                    </Fragment>
-                );
-            })}
+            <h3>{data.title}</h3>
+            <p>{data.timeframes[timeframe].current}hrs</p>
+            <p>Yesterday - {data.timeframes[timeframe].previous}hrs</p>
         </div>
     );
 }

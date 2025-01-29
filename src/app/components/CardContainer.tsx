@@ -1,15 +1,31 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from "react";
 import Image from "next/image";
 import Card from "./Card";
+import { CardProps } from "./Card";
 
 interface CardContainerProps {
-    data: any;
+    data: {
+        title: string;
+        timeframes: {
+            daily: {
+                current: number;
+                previous: number;
+            };
+            weekly: {
+                current: number;
+                previous: number;
+            };
+            monthly: {
+                current: number;
+                previous: number;
+            };
+        };
+    }[];
 }
 
 export default function CardContainer({ data }: CardContainerProps) {
-    const [timeframe, setTimeFrame] = useState("daily");
+    const [timeframe, setTimeFrame] = useState<string>("daily");
     return (
         <>
             <div>
@@ -42,7 +58,10 @@ export default function CardContainer({ data }: CardContainerProps) {
                     </button>
                 </div>
             </div>
-            <Card data={data} timeframe={timeframe} />
+
+            {data.map((d: CardProps["data"], idx: number) => {
+                return <Card key={idx} data={d} timeframe={timeframe} />;
+            })}
         </>
     );
 }
