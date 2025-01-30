@@ -1,4 +1,5 @@
 // import { Fragment } from "react";
+import "../globals.css";
 
 export interface CardProps {
     data: {
@@ -15,7 +16,7 @@ export interface CardProps {
 
 export default function Card({ data, timeframe }: CardProps) {
     return (
-        <div>
+        <div className="card bg-neutral-darkBlue">
             <h3>{data.title}</h3>
             <p>{data.timeframes[timeframe].current}hrs</p>
             <p>Yesterday - {data.timeframes[timeframe].previous}hrs</p>

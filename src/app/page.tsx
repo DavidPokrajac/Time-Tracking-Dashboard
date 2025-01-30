@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { promises as fs } from "fs";
 import CardContainer from "./components/CardContainer";
+import "./globals.css";
 
 export default async function Home() {
     const file = await fs.readFile(process.cwd() + "/data.json", "utf8");
@@ -8,8 +8,8 @@ export default async function Home() {
     console.log(data);
 
     return (
-        <main>
-            <section>
+        <main className="min-h-screen content-center">
+            <section className="grid grid-cols-[auto_repeat(4,_minmax(100px,_200px))_auto] grid-rows-[auto_repeat(2,_200px)_auto]">
                 <CardContainer data={data} />
             </section>
         </main>

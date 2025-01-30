@@ -26,9 +26,10 @@ interface CardContainerProps {
 
 export default function CardContainer({ data }: CardContainerProps) {
     const [timeframe, setTimeFrame] = useState<string>("daily");
+
     return (
         <>
-            <div>
+            <div className="col-start-2 col-end-3">
                 <Image
                     src="/images/image-jeremy.png"
                     width={234}
