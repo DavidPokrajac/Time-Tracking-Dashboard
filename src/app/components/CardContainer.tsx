@@ -29,15 +29,17 @@ export default function CardContainer({ data }: CardContainerProps) {
 
     return (
         <>
-            <div className="col-start-2 col-end-3">
-                <Image
-                    src="/images/image-jeremy.png"
-                    width={234}
-                    height={234}
-                    alt=""
-                />
-                <p>Report for</p>
-                <h2>Jeremy Robson</h2>
+            <div className="col-start-2 col-end-3 row-span-2">
+                <div className="bg-primary-blue">
+                    <Image
+                        src="/images/image-jeremy.png"
+                        width={78}
+                        height={78}
+                        alt=""
+                    />
+                    <p>Report for</p>
+                    <h2>Jeremy Robson</h2>
+                </div>
                 <div>
                     <button
                         onClick={() => setTimeFrame("daily")}
