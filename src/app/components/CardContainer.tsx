@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+
 import { useState } from "react";
-import Image from "next/image";
 import Card from "./Card";
 import { CardProps } from "./Card";
+import ProfileCard from "./ProfileCard";
+import Button from "./Button";
 
 interface CardContainerProps {
     data: {
@@ -27,60 +28,35 @@ interface CardContainerProps {
 
 export default function CardContainer({ data }: CardContainerProps) {
     const [timeframe, setTimeFrame] = useState<string>("daily");
-    const [active, setActive] = useState<string>("daily");
 
-    function handleTimeFrame(event: any) {
-        setTimeFrame(event?.target.value);
-        setActive(event.target.value);
-    }
+    const activeTimeframe: string = timeframe;
 
     return (
         <>
             <div className="grid grid-rows-[65%_35%] col-start-2 col-end-3 row-span-2">
-                <div className="bg-primary-blue rounded-[15px] p-6">
-                    <Image
-                        src="/images/image-jeremy.png"
-                        width={78}
-                        height={78}
-                        alt=""
-                        className="border-[3px] border-solid border-white rounded-full"
-                    />
-                    <p className="text-[0.83333rem] text-[var(--clr-neutral-pale-blue)] mt-8">
-                        Report for
-                    </p>
-                    <h2 className="text-[2.2222rem] font-light">
-                        Jeremy Robson
-                    </h2>
-                </div>
-                <div className="buttons-container bg-neutral-darkBlue flex flex-col justify-evenly items-start px-6 text-[var(--clr-neutral-desaturated-blue)] rounded-[15px]">
-                    <button
-                        className={`${
-                            active === timeframe
-                                ? "text-white"
-                                : "text-gray-950"
-                        }`}
-                        onClick={() => handleTimeFrame("daily")}
+                <ProfileCard />
+                <div className="buttons-container bg-neutral-darkBlue flex flex-col justify-evenly items-start px-6 rounded-[15px]">
+                    <Button
+                        timeframe="daily"
+                        activeTimeframe={activeTimeframe}
+                        onClick={() => setTimeFrame("daily")}
                     >
                         Daily
-                    </button>
-                    <button
-                        className={`${
-                            active === timeframe
-                                ? "text-white"
-                                : "text-gray-950"
-                        }`}
-                        onClick={() => handleTimeFrame("weekly")}
+                    </Button>
+                    <Button
+                        timeframe="weekly"
+                        activeTimeframe={activeTimeframe}
+                        onClick={() => setTimeFrame("weekly")}
                     >
                         Weekly
-                    </button>
-                    <button
-                        className={`${
-                            active === timeframe ? "text-white" : ""
-                        }`}
-                        onClick={() => handleTimeFrame("monthly")}
+                    </Button>
+                    <Button
+                        timeframe="monthly"
+                        activeTimeframe={activeTimeframe}
+                        onClick={() => setTimeFrame("monthly")}
                     >
                         Monthly
-                    </button>
+                    </Button>
                 </div>
             </div>
 
