@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+// import { Rubik } from "next/font/google";
 import "./variables.css";
 import "./globals.css";
-
-const rubik = Rubik({
-    variable: "--font-rubik-serif",
-    subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
     title: "Frontend Mentor | Time tracking dashboard",
@@ -20,10 +15,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-                className={`${rubik.variable} antialiased bg-neutral-veryDarkBlue text-white`}
-            >
+        <html lang="en" className="text-[length:var(--fs-main)]">
+            <body className={`antialiased bg-neutral-veryDarkBlue text-white`}>
                 {children}
             </body>
         </html>

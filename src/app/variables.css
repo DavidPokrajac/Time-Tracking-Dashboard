@@ -16,5 +16,7 @@
         --clr-neutral-dark-blue: hsl(235, 46%, 20%);
         --clr-neutral-desaturated-blue: hsl(235, 45%, 61%);
         --clr-neutral-pale-blue: hsl(236, 100%, 87%);
+
+        --fs-main: 18px;
     }
 }
