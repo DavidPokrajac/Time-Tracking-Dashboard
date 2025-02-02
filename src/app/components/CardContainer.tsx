@@ -33,9 +33,9 @@ export default function CardContainer({ data }: CardContainerProps) {
 
     return (
         <>
-            <div className="grid grid-rows-[65%_35%] col-start-2 col-end-3 row-span-2">
+            <div className="grid grid-rows-[auto_auto] md:grid-rows-[65%_35%] md:col-start-2 md:col-end-3 md:row-span-2">
                 <ProfileCard />
-                <div className="buttons-container bg-neutral-darkBlue flex flex-col justify-evenly items-start px-6 rounded-[15px]">
+                <div className="buttons-container bg-neutral-darkBlue flex flex-row justify-between md:flex-col md:justify-evenly items-start p-4 md:px-6 md:py-0 rounded-[15px]">
                     <Button
                         timeframe="daily"
                         activeTimeframe={activeTimeframe}
