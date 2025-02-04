@@ -9,7 +9,7 @@ export default async function Home() {
 
     return (
         <main className="min-h-screen content-center">
-            <section className="grid grid-cols-[95%] grid-rows-[200px_repeat(10,_170px)] md:grid-cols-[auto_repeat(4,_minmax(100px,_255px))_auto] md:grid-rows-[235px_235px] gap-6 justify-center">
+            <section className="grid grid-cols-[10px_95%_10px] justify-center grid-rows-[200px_repeat(8,_175px)] md:grid-cols-[20px_repeat(4,_minmax(100px,_255px))_20px] md:grid-rows-[225px_225px] gap-6">
                 <CardContainer data={data} />
             </section>
         </main>

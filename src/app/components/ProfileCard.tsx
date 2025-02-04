@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProfileCard() {
     return (
-        <div className="grid grid-cols-[100px_1fr] grid-rows-[100px] md:grid-cols-[1fr] md:grid-rows-[min-content_1fr] bg-primary-blue rounded-[15px] p-6 items-center">
+        <div className="bg-primary-blue rounded-[15px] p-6 flex flex-row md:grid md:col-start-1 md:col-span-2">
             <Image
                 src="/images/image-jeremy.png"
                 width={78}
@@ -10,11 +10,11 @@ export default function ProfileCard() {
                 alt=""
                 className="row-start-1 col-start-1 col-end-2 border-[3px] border-solid border-white rounded-full"
             />
-            <div className="col-start-2 col-end-3 row-start-1 md:col-start-1 md:col-end-2 md:row-start-2">
+            <div className="col-start-2 col-end-3 row-start-1 ml-6 md:col-start-1 md:col-end-2 md:row-start-2 md:ml-0">
                 <p className="text-[0.83333rem] row-start-1 text-[var(--clr-neutral-pale-blue)]">
                     Report for
                 </p>
-                <h2 className="text-[24px] md:text-[2.2222rem] row-start-2 font-light">
+                <h2 className="text-[24px] lg:text-[2.2222rem] row-start-2 font-light">
                     Jeremy Robson
                 </h2>
             </div>
