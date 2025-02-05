@@ -10,6 +10,16 @@ exports.id = "vendor-chunks/next";
 exports.ids = ["vendor-chunks/next"];
 exports.modules = {
 
+/***/ "(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Rubik\",\"arguments\":[{\"weight\":[\"300\",\"400\",\"500\"],\"subsets\":[\"latin\"],\"display\":\"swap\"}],\"variableName\":\"rubik\"}":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Rubik","arguments":[{"weight":["300","400","500"],"subsets":["latin"],"display":"swap"}],"variableName":"rubik"} ***!
+  \************************************************************************************************************************************************************************************************************/
+/***/ ((module) => {
+
+eval("// Exports\nmodule.exports = {\n\t\"style\": {\"fontFamily\":\"'Rubik', 'Rubik Fallback'\",\"fontStyle\":\"normal\"},\n\t\"className\": \"__className_67f3e0\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC9mb250L2dvb2dsZS90YXJnZXQuY3NzP3tcInBhdGhcIjpcInNyY1xcXFxhcHBcXFxcbGF5b3V0LnRzeFwiLFwiaW1wb3J0XCI6XCJSdWJpa1wiLFwiYXJndW1lbnRzXCI6W3tcIndlaWdodFwiOltcIjMwMFwiLFwiNDAwXCIsXCI1MDBcIl0sXCJzdWJzZXRzXCI6W1wibGF0aW5cIl0sXCJkaXNwbGF5XCI6XCJzd2FwXCJ9XSxcInZhcmlhYmxlTmFtZVwiOlwicnViaWtcIn0iLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBLFdBQVcsOERBQThEO0FBQ3pFO0FBQ0EiLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcZDBwb2tcXE9uZURyaXZlXFxSYWRuYSBwb3ZyxaFpbmFcXHRpbWUtdHJhY2tpbmctZGFzaGJvYXJkXFxub2RlX21vZHVsZXNcXG5leHRcXGZvbnRcXGdvb2dsZVxcdGFyZ2V0LmNzcz97XCJwYXRoXCI6XCJzcmNcXGFwcFxcbGF5b3V0LnRzeFwiLFwiaW1wb3J0XCI6XCJSdWJpa1wiLFwiYXJndW1lbnRzXCI6W3tcIndlaWdodFwiOltcIjMwMFwiLFwiNDAwXCIsXCI1MDBcIl0sXCJzdWJzZXRzXCI6W1wibGF0aW5cIl0sXCJkaXNwbGF5XCI6XCJzd2FwXCJ9XSxcInZhcmlhYmxlTmFtZVwiOlwicnViaWtcIn18cnNjIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcInN0eWxlXCI6IHtcImZvbnRGYW1pbHlcIjpcIidSdWJpaycsICdSdWJpayBGYWxsYmFjaydcIixcImZvbnRTdHlsZVwiOlwibm9ybWFsXCJ9LFxuXHRcImNsYXNzTmFtZVwiOiBcIl9fY2xhc3NOYW1lXzY3ZjNlMFwiXG59O1xuIl0sIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6WzBdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next/font/google/target.css?{\"path\":\"src\\\\app\\\\layout.tsx\",\"import\":\"Rubik\",\"arguments\":[{\"weight\":[\"300\",\"400\",\"500\"],\"subsets\":[\"latin\"],\"display\":\"swap\"}],\"variableName\":\"rubik\"}\n");
+
+/***/ }),
+
 /***/ "(ssr)/./node_modules/next/dist/api/image.js":
 /*!*********************************************!*\
   !*** ./node_modules/next/dist/api/image.js ***!
