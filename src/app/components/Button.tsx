@@ -20,7 +20,7 @@ export default function Button({
                 activeTimeframe === timeframe
                     ? "text-white"
                     : "text-[var(--clr-neutral-desaturated-blue)]"
-            } hover:text-white hover:cursor-pointer transition delay-50 duration-250 ease-in-out focus-visible:outline-[2px] focus-visible:outline-solid outline-transparent focus-visible:outline-offset[10px]`}
+            } hover:text-white hover:cursor-pointer transition delay-50 duration-250 ease-in-out focus-visible:outline-4 focus-visible:outline-dashed focus-visible:outline-transparent focus-visible:outline-offset-2 focus-visible:shadow-md focus-visible:shadow-indigo-600`}
         >
             {children}
         </button>

@@ -7,14 +7,14 @@ export default function ProfileCard() {
                 src="/images/image-jeremy.png"
                 width={78}
                 height={78}
-                alt=""
+                alt="A mugshot of a person"
                 className="row-start-1 col-start-1 col-end-2 border-[3px] border-solid border-white rounded-full"
             />
-            <div className="col-start-2 col-end-3 row-start-1 ml-6 md:col-start-1 md:col-end-2 md:row-start-2 md:ml-0">
-                <p className="text-[0.83333rem] row-start-1 text-[var(--clr-neutral-pale-blue)]">
+            <div className="grid md:grid-rows-[min-content_1fr] col-start-2 col-end-3 row-start-1 ml-6 md:col-start-1 md:col-end-2 md:row-start-2 md:ml-0">
+                <p className="report text-[0.83333rem] row-start-1 text-[var(--clr-neutral-pale-blue)]">
                     Report for
                 </p>
-                <h2 className="text-[24px] lg:text-[2.2222rem] row-start-2 font-light">
+                <h2 className="text-[1.3333rem] lg:text-[2.2222rem] row-start-2 font-light">
                     Jeremy Robson
                 </h2>
             </div>

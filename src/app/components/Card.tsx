@@ -1,4 +1,3 @@
-// import { Fragment } from "react";
 import "../globals.css";
 import Image from "next/image";
 
@@ -29,8 +28,8 @@ export default function Card({ data, timeframe }: CardProps) {
                     />
                 </a>
                 <h3 className="font-medium">{data.title}</h3>
-                <div className="card-stats flex flex-row justify-between items-center md:flex-col md:items-start">
-                    <p className="text-[1.7778rem] md:text-[2.25rem] lg:text-[3.1111rem] font-light mt-2">
+                <div className="card-stats mt-2 flex flex-row justify-between items-center md:flex-col md:items-start">
+                    <p className="text-[1.7778rem] md:text-[2.25rem] lg:text-[3.1111rem] font-light">
                         {data.timeframes[timeframe].current}hrs
                     </p>
                     <p className="text-[0.83333rem] text-[var(--clr-neutral-pale-blue)]">
