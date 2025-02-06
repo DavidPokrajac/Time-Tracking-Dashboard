@@ -17,7 +17,7 @@ export interface CardProps {
 export default function Card({ data, timeframe }: CardProps) {
     return (
         <div className="card-frame">
-            <div className="card bg-neutral-darkBlue rounded-xl p-6 hover:bg-[#33397A] hover:cursor-pointer transition delay-50 duration-300 ease-out">
+            <div className="card text-black bg-white dark:text-white dark:bg-neutral-darkBlue rounded-xl p-6 dark:hover:bg-[#33397A] hover:cursor-pointer transition delay-50 duration-300 ease-out">
                 <a className="float-right mt-2">
                     <Image
                         src="/images/icon-ellipsis.svg"

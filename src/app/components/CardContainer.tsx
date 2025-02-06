@@ -33,7 +33,7 @@ export default function CardContainer({ data }: CardContainerProps) {
 
     return (
         <>
-            <div className="grid col-start-2 col-end-3 md:col-start-2 md:col-span-3 md:row-start-1 md:row-end-2 md:grid-cols-subgrid lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-span-2">
+            <div className="grid col-start-2 col-end-3 md:col-start-2 md:col-span-3 md:row-start-1 md:row-end-2 md:grid-cols-subgrid lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-span-2 ">
                 <ProfileCard />
                 <div className="buttons-container bg-neutral-darkBlue flex flex-row justify-between md:flex-col md:justify-evenly items-start px-8 py-4 md:px-0 md:pr-6 md:py-0 lg:px-6 rounded-[15px]">
                     <Button

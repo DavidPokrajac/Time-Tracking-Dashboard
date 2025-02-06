@@ -2,85 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-    margin-block-end: 0;
-}
-
-ul[role="list"],
-ol[role="list"] {
-    list-style: none;
-}
-
-body {
-    min-height: 100vh;
-    line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-    line-height: 1.1;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    text-wrap: balance;
-}
-
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-    color: currentColor;
-}
-
-img,
-picture {
-    max-width: 100%;
-    display: block;
-}
-
-input,
-button,
-textarea,
-select {
-    font-family: inherit;
-    font-size: inherit;
-}
-
-textarea:not([rows]) {
-    min-height: 10em;
-}
-
-:target {
-    scroll-margin-block: 5ex;
-}
-
 .card-frame {
     position: relative;
     border-radius: 16px;
@@ -180,6 +101,114 @@ textarea:not([rows]) {
     place-self: end start;
 }
 
+html:has(:not([class*="dark"])) .card-frame:nth-of-type(2) .card {
+    border: 2px solid var(--clr-primary-work);
+    color: var(--clr-primary-work);
+
+    .card-stats p:last-child {
+        color: hsla(15, 100%, 70%, 0.6);
+    }
+}
+
+html:has(:not([class*="dark"])) .card-frame:nth-of-type(3) .card {
+    border: 2px solid var(--clr-primary-play);
+    color: var(--clr-primary-play);
+
+    .card-stats p:last-child {
+        color: hsla(195, 74%, 62%, 0.8);
+    }
+}
+
+html:has(:not([class*="dark"])) .card-frame:nth-of-type(4) .card {
+    border: 2px solid var(--clr-primary-study);
+    color: var(--clr-primary-study);
+
+    .card-stats p:last-child {
+        color: hsla(348, 100%, 68%, 0.8);
+    }
+}
+
+html:has(:not([class*="dark"])) .card-frame:nth-of-type(5) .card {
+    border: 2px solid var(--clr-primary-exercise);
+    color: var(--clr-primary-exercise);
+
+    .card-stats p:last-child {
+        color: hsla(145, 58%, 55%, 0.8);
+    }
+}
+
+html:has(:not([class*="dark"])) .card-frame:nth-of-type(6) .card {
+    border: 2px solid var(--clr-primary-social);
+    color: var(--clr-primary-social);
+
+    .card-stats p:last-child {
+        color: hsla(264, 64%, 52%, 0.8);
+    }
+}
+
+html:has(:not([class*="dark"])) .card-frame:nth-of-type(7) .card {
+    border: 2px solid var(--clr-primary-self-care);
+    color: var(--clr-primary-self-care);
+
+    .card-stats p:last-child {
+        color: hsla(43, 84%, 65%, 0.8);
+    }
+}
+
+html[class*="dark"] .card-frame:nth-of-type(2) .card {
+    border: none;
+    color: white;
+
+    .card-stats p:last-child {
+        color: var(--clr-neutral-pale-blue);
+    }
+}
+
+html[class*="dark"] .card-frame:nth-of-type(3) .card {
+    border: none;
+    color: white;
+
+    .card-stats p:last-child {
+        color: var(--clr-neutral-pale-blue);
+    }
+}
+
+html[class*="dark"] .card-frame:nth-of-type(4) .card {
+    border: none;
+    color: white;
+
+    .card-stats p:last-child {
+        color: var(--clr-neutral-pale-blue);
+    }
+}
+
+html[class*="dark"] .card-frame:nth-of-type(5) .card {
+    border: none;
+    color: white;
+
+    .card-stats p:last-child {
+        color: var(--clr-neutral-pale-blue);
+    }
+}
+
+html[class*="dark"] .card-frame:nth-of-type(6) .card {
+    border: none;
+    color: white;
+
+    .card-stats p:last-child {
+        color: var(--clr-neutral-pale-blue);
+    }
+}
+
+html[class*="dark"] .card-frame:nth-of-type(7) .card {
+    border: none;
+    color: white;
+
+    .card-stats p:last-child {
+        color: var(--clr-neutral-pale-blue);
+    }
+}
+
 @media (min-width: 767px) {
     .card-frame:nth-of-type(2),
     .card-frame:nth-of-type(3),
@@ -257,4 +286,31 @@ textarea:not([rows]) {
         grid-row: 3;
         grid-column: 2 / 3;
     }
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    height: 42px;
+    border: 2px solid var(--clr-primary-blue);
+    border-radius: 100vw;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--clr-primary-study);
+    border-radius: 100vw;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.5s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    left: calc(100px - 40px);
+    background-color: var(--clr-primary-exercise);
 }
