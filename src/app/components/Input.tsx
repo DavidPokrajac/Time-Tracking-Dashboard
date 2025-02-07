@@ -39,7 +39,7 @@ export default function Input() {
     }, [darkMode]);
 
     return (
-        <span className="text-primary-blue mb-10 mx-auto flex items-center gap-5">
+        <span className="text-primary-blue mt-10 mb-10 mx-auto flex items-center gap-5 md:mt-0">
             Dark mode:
             <label>
                 <input

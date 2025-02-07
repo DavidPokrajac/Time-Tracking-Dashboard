@@ -1,5 +1,12 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import "../globals.css";
 import Image from "next/image";
+
+gsap.registerPlugin(useGSAP);
 
 export interface CardProps {
     data: {
@@ -15,9 +22,33 @@ export interface CardProps {
 }
 
 export default function Card({ data, timeframe }: CardProps) {
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    useGSAP(() => {
+        const tl = gsap.timeline({ repeat: 0, repeatDelay: 1 });
+        tl.to(cardRef.current, {
+            height: 0,
+            contentVisibility: "hidden",
+            duration: 0.5,
+            ease: "power2.out",
+        });
+        tl.to(cardRef.current, {
+            height: cardRef?.current?.clientHeight,
+            duration: 0.5,
+            stagger: 0.75,
+            ease: "power2.out",
+        });
+        tl.to(cardRef.current, {
+            contentVisibility: "visible",
+        });
+    }, [timeframe]);
+
     return (
         <div className="card-frame">
-            <div className="card text-black bg-white dark:text-white dark:bg-neutral-darkBlue rounded-xl p-6 dark:hover:bg-[#33397A] hover:cursor-pointer transition delay-50 duration-300 ease-out">
+            <div
+                ref={cardRef}
+                className="card text-black bg-white dark:text-white dark:bg-neutral-darkBlue rounded-xl p-6 dark:hover:bg-[#33397A] hover:cursor-pointer transition delay-50 duration-300 ease-out"
+            >
                 <a className="float-right mt-2">
                     <Image
                         src="/images/icon-ellipsis.svg"
