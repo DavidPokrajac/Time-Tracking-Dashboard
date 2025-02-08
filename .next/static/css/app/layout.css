@@ -850,6 +850,24 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.outline {
+  outline-style: solid;
+}
+.outline-1 {
+  outline-width: 1px;
+}
+.outline-2 {
+  outline-width: 2px;
+}
+.outline-primary-blue {
+  outline-color: var(--clr-primary-blue);
+}
+.outline-\[var\(--clr-primary-blue\)\] {
+  outline-color: var(--clr-primary-blue);
+}
+.outline-red-950 {
+  outline-color: #450a0a;
+}
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -899,9 +917,54 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.focus-visible\:shadow-sm:focus-visible {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-lg:focus-visible {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_2px_5px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 2px 5px #4f46e5;
+  --tw-shadow-colored: 0 2px 5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_5px_5px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 5px 5px #4f46e5;
+  --tw-shadow-colored: 0 5px 5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_5px_3px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 5px 3px #4f46e5;
+  --tw-shadow-colored: 0 5px 3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_3px_1px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 3px 1px #4f46e5;
+  --tw-shadow-colored: 0 3px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus-visible\:shadow-indigo-600:focus-visible {
   --tw-shadow-color: #4f46e5;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.focus-visible\:shadow-\[var\(--clr-primary-blue\)\]:focus-visible {
+  --tw-shadow-color: var(--clr-primary-blue);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.focus-visible\:outline:focus-visible {
+  outline-style: solid;
 }
 
 .focus-visible\:outline-dashed:focus-visible {
@@ -912,12 +975,24 @@ video {
   outline-width: 4px;
 }
 
+.focus-visible\:outline-1:focus-visible {
+  outline-width: 1px;
+}
+
 .focus-visible\:outline-offset-2:focus-visible {
   outline-offset: 2px;
 }
 
 .focus-visible\:outline-transparent:focus-visible {
   outline-color: transparent;
+}
+
+.focus-visible\:outline-\[var\(--clr-primary-blue\)\]:focus-visible {
+  outline-color: var(--clr-primary-blue);
+}
+
+.focus-visible\:outline-zinc-950:focus-visible {
+  outline-color: #09090b;
 }
 
 .dark\:border-none:is(.dark *) {
@@ -1826,6 +1901,24 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.outline {
+  outline-style: solid;
+}
+.outline-1 {
+  outline-width: 1px;
+}
+.outline-2 {
+  outline-width: 2px;
+}
+.outline-primary-blue {
+  outline-color: var(--clr-primary-blue);
+}
+.outline-\[var\(--clr-primary-blue\)\] {
+  outline-color: var(--clr-primary-blue);
+}
+.outline-red-950 {
+  outline-color: #450a0a;
+}
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2189,9 +2282,54 @@ input[type="checkbox"]:checked {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.focus-visible\:shadow-sm:focus-visible {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-lg:focus-visible {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_2px_5px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 2px 5px #4f46e5;
+  --tw-shadow-colored: 0 2px 5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_5px_5px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 5px 5px #4f46e5;
+  --tw-shadow-colored: 0 5px 5px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_5px_3px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 5px 3px #4f46e5;
+  --tw-shadow-colored: 0 5px 3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:shadow-\[0_3px_1px_\#4f46e5\]:focus-visible {
+  --tw-shadow: 0 3px 1px #4f46e5;
+  --tw-shadow-colored: 0 3px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus-visible\:shadow-indigo-600:focus-visible {
   --tw-shadow-color: #4f46e5;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.focus-visible\:shadow-\[var\(--clr-primary-blue\)\]:focus-visible {
+  --tw-shadow-color: var(--clr-primary-blue);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.focus-visible\:outline:focus-visible {
+  outline-style: solid;
 }
 
 .focus-visible\:outline-dashed:focus-visible {
@@ -2202,12 +2340,24 @@ input[type="checkbox"]:checked {
   outline-width: 4px;
 }
 
+.focus-visible\:outline-1:focus-visible {
+  outline-width: 1px;
+}
+
 .focus-visible\:outline-offset-2:focus-visible {
   outline-offset: 2px;
 }
 
 .focus-visible\:outline-transparent:focus-visible {
   outline-color: transparent;
+}
+
+.focus-visible\:outline-\[var\(--clr-primary-blue\)\]:focus-visible {
+  outline-color: var(--clr-primary-blue);
+}
+
+.focus-visible\:outline-zinc-950:focus-visible {
+  outline-color: #09090b;
 }
 
 .dark\:border-none:is(.dark *) {

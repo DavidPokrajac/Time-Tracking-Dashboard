@@ -33,7 +33,11 @@ export default function Input() {
         <span className="text-primary-blue mt-10 mb-10 mx-auto flex items-center gap-5 md:mt-0">
             Dark mode:
             <label>
-                <input type="checkbox" onChange={handleMode} />
+                <input
+                    type="checkbox"
+                    onChange={handleMode}
+                    className="focus-visible:outline focus-visible:outline-1 focus-visible:outline-transparent focus-visible:shadow-md focus-visible:shadow-[var(--clr-primary-blue)]"
+                />
             </label>
         </span>
     );
