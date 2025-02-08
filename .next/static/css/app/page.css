@@ -547,9 +547,6 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
-.resize {
-  resize: both;
-}
 .grid-cols-\[10px_95\%_10px\] {
   grid-template-columns: 10px 95% 10px;
 }

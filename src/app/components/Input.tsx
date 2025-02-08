@@ -1,39 +1,30 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 export default function Input() {
-    const [darkMode, setDarkMode] = useState<boolean>(false);
-    useEffect(() => {
-        if (
-            localStorage.getItem("color-theme") === "dark" ||
-            (!("color-theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
+    const [darkMode, setDarkMode] = useState<string>("");
 
-        if (localStorage.getItem("color-theme")) {
-            if (localStorage.getItem("color-theme") === "light") {
-                document.documentElement.classList.add("dark");
-                localStorage.setItem("color-theme", "dark");
-                localStorage.setItem("saved", "true");
-            } else {
-                document.documentElement.classList.remove("dark");
-                localStorage.setItem("color-theme", "light");
-                localStorage.setItem("saved", "false");
-            }
+    function handleMode(event: ChangeEvent<HTMLInputElement>) {
+        if (event.target.checked) {
+            setDarkMode("dark");
         } else {
-            if (document.documentElement.classList.contains("dark")) {
-                document.documentElement.classList.remove("dark");
-                localStorage.setItem("color-theme", "light");
-                localStorage.setItem("saved", "false");
-            } else {
+            setDarkMode("light");
+        }
+    }
+
+    useEffect(() => {
+        const colorTheme = localStorage.getItem("color-theme") as string;
+        setDarkMode(colorTheme);
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("color-theme", darkMode);
+        if (localStorage.getItem("color-theme")) {
+            if (localStorage.getItem("color-theme") === "dark") {
                 document.documentElement.classList.add("dark");
-                localStorage.setItem("color-theme", "dark");
-                localStorage.setItem("saved", "true");
+            } else {
+                document.documentElement.classList.remove("dark");
             }
         }
     }, [darkMode]);
@@ -42,10 +33,7 @@ export default function Input() {
         <span className="text-primary-blue mt-10 mb-10 mx-auto flex items-center gap-5 md:mt-0">
             Dark mode:
             <label>
-                <input
-                    type="checkbox"
-                    onChange={() => setDarkMode(!darkMode)}
-                />
+                <input type="checkbox" onChange={handleMode} />
             </label>
         </span>
     );
