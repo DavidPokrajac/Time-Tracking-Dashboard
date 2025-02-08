@@ -55,7 +55,7 @@ export default function Card({ data, timeframe }: CardProps) {
                         width={21}
                         height={5}
                         alt=""
-                        className="hover:brightness-[2] transition delay-75 duration-75 ease-in-out"
+                        className="hover:grayscale dark:hover:brightness-[2] transition delay-75 duration-75 ease-in-out"
                     />
                 </a>
                 <h3 className="font-medium">{data.title}</h3>
